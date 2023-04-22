@@ -8,6 +8,7 @@ Python 3.11 trở lên.
 pip install moviepy
 pip install psutil
 ```
+Hoặc có thể chạy file install.bat để cài đặt các module cho nhanh.
 
 ## Cách sử dụng
 
