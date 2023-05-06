@@ -1,4 +1,4 @@
-#open-tabs.py version 1.0
+#roblox-open-tabs.py version 1.0
 import webbrowser
 
 # Đường dẫn tới file list.txt
