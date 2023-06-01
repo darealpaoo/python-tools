@@ -24,4 +24,4 @@ to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
 
-## simple-auto-click.py version 1.0
+## simple-auto-click version 1.0

@@ -25,4 +25,4 @@ to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
 
-## video_split.py version 1.0
+## video_split version 1.0
