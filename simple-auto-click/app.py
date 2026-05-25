@@ -1,9 +1,8 @@
-#simple-auto-click.py version 1.0
+#simple-auto-click.py version 2.0
 import tkinter as tk
 import tkinter.ttk as ttk
 import threading
 import time
-import keyboard
 import pyautogui
 import configparser
 
@@ -28,6 +27,7 @@ class AutoClicker:
         self.root.title("Auto Clicker")
         self.root.geometry("300x150")
         self.root.resizable(width=False, height=False)
+        self.root.attributes("-toolwindow", True)
         self.root.attributes("-topmost", self.always_on_top)
 
         self.is_running = False
@@ -46,7 +46,7 @@ class AutoClicker:
         self.button_stop.grid(row=1, column=1, padx=10, pady=10)
 
         self.always_on_top_var = tk.BooleanVar(value=self.always_on_top)
-        self.check_always_on_top = tk.Checkbutton(self.root, text="Always on top", command=self.set_always_on_top, variable=self.always_on_top_var, font=("Arial", 12))
+        self.check_always_on_top = tk.Checkbutton(self.root, text="Always on top", command=self.set_always_on_top, variable=self.always_on_top_var, font=("Arial", 12), state="disabled")
         self.check_always_on_top.grid(row=2, column=0, columnspan=2, padx=10, pady=10)
 
         self.button_save = ttk.Button(self.root, text="Save", command=self.save_config)
@@ -117,7 +117,7 @@ class AutoClicker:
     def update_always_on_top(self):
         if self.root is None or not hasattr(self.root, "winfo_exists") or not self.root.winfo_exists():
             return
-        self.always_on_top = bool(int(self.config.get("Settings", "AlwaysOnTop")))
+        self.always_on_top = True
         self.always_on_top_var.set(self.always_on_top)
         self.root.attributes("-topmost", self.always_on_top)
 
