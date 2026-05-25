@@ -6,7 +6,6 @@ import time
 import pyautogui
 import configparser
 
-
 class AutoClicker:
     def __init__(self):
         self.config = configparser.ConfigParser()
